@@ -1,0 +1,30 @@
+<!-- testimonials.component.html -->
+<div class="testimonials-container">
+    <div class="testimonial-wrapper">
+        @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+        <div class="testimonial-card" [class.active]="i === currentIndex">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">{{testimonial.text}}</p>
+            <div class="testimonial-author">
+                <img [src]="testimonial.avatar" [alt]="testimonial.name" class="author-avatar">
+                <div class="author-info">
+                    <h4 class="author-name">{{testimonial.name}}</h4>
+                    <p class="author-position">{{testimonial.position}}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+    @if (isBrowser) {
+    <div class="testimonial-controls">
+        <button class="control-btn" (click)="prevTestimonial()">❮</button>
+        <div class="dots">
+            @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+            <span [class.active]="i === currentIndex" (click)="goToTestimonial(i)" class="dot">
+            </span> }
+        </div>
+        <button class="control-btn" (click)="nextTestimonial()">❯</button>
+    </div>
+    }
+</div>
