@@ -2,7 +2,7 @@
 
 .testimonials-container {
     max-width: 100%;
-    margin: 0px auto 0;
+    margin: 100px auto;
     padding: 20px;
     position: relative;
     background: #1a0033;
@@ -37,8 +37,8 @@
     transform: translateX(-50%) scale(0.95);
     pointer-events: none;
     visibility: hidden;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 500px;
+    margin-bottom: 500px;
 }
 
 .testimonial-card.active {
