@@ -5,36 +5,22 @@
 }
 
 .spaceline-container {
-<<<<<<< HEAD
     position: relative;
-    /* Added */
-=======
->>>>>>> origin
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(to top right, #0a0a24, #2c3e50);
-<<<<<<< HEAD
-    min-height: 115vh;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
     color: white;
-=======
-    color: white;
-    height: 115vh;
->>>>>>> origin
-    text-align: center;
 }
 
 .spaceline-header {
-<<<<<<< HEAD
-    position: absolute;
-    /* Added */
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    /* Added */
 }
+
+
+/* Video Background */
 
 .video-background {
     position: absolute;
@@ -46,14 +32,8 @@
 }
 
 .video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -63,212 +43,135 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
     z-index: 2;
 }
 
 
-/* Content Styles */
+/* Content Wrapper */
 
-=======
-    margin-top: 0%;
+.content-wrapper {
+    position: relative;
+    z-index: 3;
+    padding: 2rem 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.bg {
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+}
+
+.logo h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* Main Text */
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    transform: translateY(-50%);
+}
+
+.welcome-text {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    color: #999;
+}
+
+.main-text h1 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+
+/* Video Card */
+
+.video-card {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    overflow: hidden;
+    width: 320px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.02);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.card-image img {
     width: 100%;
-    margin-bottom: 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+    height: 100%;
+    object-fit: cover;
 }
 
-h1 {
-    font-size: 48px;
-    font-family: Euclid Galactic, sans-serif;
-}
-
->>>>>>> origin
-.company {
-    font-size: 24px;
-    position: absolute;
-    top: 10%;
-    right: 90%;
-<<<<<<< HEAD
-    z-index: 3;
-    /* Added */
-=======
->>>>>>> origin
-}
-
-.first {
-    font-size: 44px;
-    position: absolute;
-    top: 25%;
-    right: 70%;
-<<<<<<< HEAD
-    z-index: 3;
-    /* Added */
-=======
-}
-
-.space-image {
-    margin-top: 0px;
-    position: relative;
-}
-
-.craft {
-    width: 600px;
-    transform: rotate(-10deg);
-    transition: transform 0.5s;
-}
-
-.craft:hover {
-    transform: rotate(0deg);
-}
-
-.signup-btn {
-    /* background-color: linear-gradient(90deg, #9441e1, #8a2be2); */
-    background: linear-gradient(to top right, #8a2be2, #b37ee4);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 30px;
-    position: absolute;
-    top: 5%;
-    left: 85%;
-}
-
-.watch-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.watch-btn {
-    background-color: #d12dd4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
->>>>>>> origin
-}
-
-.container2 {
-    display: flex;
-    background-color: #000;
-    color: #fff;
-    padding: 0px;
-    top: 85%;
-    right: 69%;
-    position: absolute;
-    width: 400px;
-    height: 150px;
-<<<<<<< HEAD
-    z-index: 3;
-    /* Added */
-=======
->>>>>>> origin
-}
-
-.left-section {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 30%;
-}
-
-.left-section img {
-<<<<<<< HEAD
-=======
-    /* max-width: 100%; */
->>>>>>> origin
-    height: auto;
-    width: 150px;
-}
-
-.right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-<<<<<<< HEAD
-    padding-left: 1px;
-    width: 70%;
-    padding-right: 20px;
-=======
-    padding-left: 0px;
-    width: 70%;
->>>>>>> origin
+.card-text {
+    padding: 1rem;
 }
 
 .watch-label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #8b00ff;
-    text-align: left;
-    padding-right: 70%;
+    display: block;
+    font-size: 0.75rem;
+    color: #9b4dff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
 }
 
-.title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
-<<<<<<< HEAD
-}
-
-.title a {
-    color: white;
-    text-decoration: none;
+.card-text h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.3;
 }
 
 
-/* Added styles for components below the video section */
+/* Media Queries */
 
-app-card,
-app-testimonials,
-app-footer {
-    position: relative;
-    z-index: 4;
-    width: 100%;
-}
-
-
-/* Ensure the content below video is visible */
-
-.spaceline-container+app-card,
-.spaceline-container+app-testimonials,
-.spaceline-container+app-footer {
-    position: relative;
-    z-index: 4;
-    background-color: #fff;
-    /* or whatever background color you want */
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 28px;
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1rem 2rem;
     }
-    .hero-content .subtitle {
-        font-size: 16px;
+    .logo {
+        left: 2rem;
     }
-}
-
-
-/* Optional: Add these styles if you want to handle video loading */
-
-.video-background.loading {
-    background: #1a0033;
-    /* Fallback color while video loads */
-=======
->>>>>>> origin
+    .main-text {
+        left: 2rem;
+    }
+    .main-text h1 {
+        font-size: 3rem;
+    }
+    .video-card {
+        left: 2rem;
+        width: calc(100% - 4rem);
+    }
 }
