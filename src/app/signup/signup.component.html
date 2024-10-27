@@ -1,46 +1,95 @@
+<!-- signup.component.html -->
 <div class="signup-container">
+    <div class="company">SpaceCo</div>
     <div class="content">
-
-        <a class="company" href="#">SpaceCo</a>
-        <div class="page-indicator">01 - 03</div>
-
         <h1 class="title">
-            <span>SIGN UP TO</span>
-            <span>HEAR MORE</span>
+            Be Among the First to Explore the Cosmos with SpaceCo
+            <span class="subtitle">Join the SpaceCo Waitlist and Secure Your Place in History</span>
         </h1>
-
-        <p class="description">
-            Learn about the SpaceCo experience and future availability of spaceflight ticket sales.
-        </p>
+        <p class="description">Be part of the next generation of space explorers.</p>
 
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
-            <div class="form-group">
-                <input type="text" formControlName="firstName" placeholder="FIRST NAME*" [ngClass]="{'invalid': signupForm.get('firstName')?.touched && signupForm.get('firstName')?.invalid}">
+            <div class="form-columns">
+                <!-- Left Column -->
+                <div class="form-column">
+                    <div class="form-group">
+                        <input type="text" formControlName="firstName" placeholder="First Name*" [class.invalid]="signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="lastName" placeholder="Last Name*" [class.invalid]="signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" formControlName="email" placeholder="Email*" [class.invalid]="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" formControlName="phone" placeholder="Phone Number*" [class.invalid]="signupForm.get('phone')?.invalid && signupForm.get('phone')?.touched">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="country" placeholder="Country*" [class.invalid]="signupForm.get('country')?.invalid && signupForm.get('country')?.touched">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="form-column">
+                    <div class="form-group">
+                        <select formControlName="destination" class="select-input" [class.invalid]="signupForm.get('destination')?.invalid && signupForm.get('destination')?.touched">
+                <option value="">Select Preferred Flight Destination*</option>
+                <option value="space_center">SpaceCo Space Center</option>
+                <option value="mars">Valles Marineris on Mars</option>
+                <option value="moon">Sea of Tranquility</option>
+                <option value="l2">Lagrange point L2</option>
+                <option value="space_rooms">Space Rooms (Luxury Package)</option>
+              </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select formControlName="budget" class="select-input" [class.invalid]="signupForm.get('budget')?.invalid && signupForm.get('budget')?.touched">
+                <option value="">Select Budget Range*</option>
+                <option value="under_100k">Under $100,000</option>
+                <option value="100k_500k">$100,000 - $500,000</option>
+                <option value="over_500k">Over $500,000</option>
+              </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select formControlName="paymentPreference" class="select-input" [class.invalid]="signupForm.get('paymentPreference')?.invalid && signupForm.get('paymentPreference')?.touched">
+                <option value="">Select Payment Preference*</option>
+                <option value="lump_sum">Lump Sum</option>
+                <option value="installments">Monthly Installments</option>
+              </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select formControlName="preferredSlot" class="select-input" [class.invalid]="signupForm.get('preferredSlot')?.invalid && signupForm.get('preferredSlot')?.touched">
+                <option value="">Select Preferred Time Slot*</option>
+                <option value="summer_2025">Summer 2025</option>
+                <option value="winter_2025">Winter 2025</option>
+                <option value="spring_2026">Spring 2026</option>
+              </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea formControlName="additionalInfo" placeholder="Additional Information (Optional)" class="textarea-input"></textarea>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <input type="text" formControlName="lastName" placeholder="LAST NAME*" [ngClass]="{'invalid': signupForm.get('lastName')?.touched && signupForm.get('lastName')?.invalid}">
-            </div>
+            <div class="form-footer">
+                <div class="terms-group">
+                    <label class="checkbox-container">
+              <input type="checkbox" formControlName="acceptTerms">
+              <span class="terms-text">
+                I accept the SpaceCo 
+                <a href="#" class="terms-link">Terms & Conditions</a> and 
+                <a href="#" class="privacy-link">Privacy Policy</a>
+              </span>
+            </label>
+                </div>
 
-            <div class="form-group">
-                <input type="email" formControlName="email" placeholder="E-MAIL*" [ngClass]="{'invalid': signupForm.get('email')?.touched && signupForm.get('email')?.invalid}">
+                <button type="submit" class="next-button" [disabled]="!signupForm.valid">
+            Join the Waitlist Now
+          </button>
             </div>
-
-            <div class="terms-group">
-                <label class="checkbox-container">
-            <input type="checkbox" formControlName="acceptTerms">
-            <span class="checkmark"></span>
-            <span class="terms-text">
-              I accept the SpaceCo 
-              <a href="#" class="privacy-link">Privacy Policy</a> and 
-              <a href="#" class="terms-link">Terms & Conditions</a>
-            </span>
-          </label>
-            </div>
-
-            <button type="submit" class="next-button" [disabled]="!signupForm.valid">
-          NEXT
-        </button>
         </form>
     </div>
 </div>

@@ -5,38 +5,69 @@
 }
 
 .spaceline-container {
+    position: relative;
+    /* Added */
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to top right, #0a0a24, #2c3e50);
+    min-height: 115vh;
     color: white;
-    height: 115vh;
     text-align: center;
 }
 
 .spaceline-header {
-    margin-top: 0%;
-}
-
-.bg {
+    position: absolute;
+    /* Added */
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+    height: 100%;
+    overflow: hidden;
+    /* Added */
 }
 
-h1 {
-    font-size: 48px;
-    font-family: Euclid Galactic, sans-serif;
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
+/* Content Styles */
 
 .company {
     font-size: 24px;
     position: absolute;
     top: 10%;
     right: 90%;
+    z-index: 3;
+    /* Added */
 }
 
 .first {
@@ -44,53 +75,8 @@ h1 {
     position: absolute;
     top: 25%;
     right: 70%;
-}
-
-.space-image {
-    margin-top: 0px;
-    position: relative;
-}
-
-.craft {
-    width: 600px;
-    transform: rotate(-10deg);
-    transition: transform 0.5s;
-}
-
-.craft:hover {
-    transform: rotate(0deg);
-}
-
-.signup-btn {
-    /* background-color: linear-gradient(90deg, #9441e1, #8a2be2); */
-    background: linear-gradient(to top right, #8a2be2, #b37ee4);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 30px;
-    position: absolute;
-    top: 5%;
-    left: 85%;
-}
-
-.watch-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.watch-btn {
-    background-color: #d12dd4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
+    z-index: 3;
+    /* Added */
 }
 
 .container2 {
@@ -103,6 +89,8 @@ h1 {
     position: absolute;
     width: 400px;
     height: 150px;
+    z-index: 3;
+    /* Added */
 }
 
 .left-section {
@@ -114,7 +102,6 @@ h1 {
 }
 
 .left-section img {
-    /* max-width: 100%; */
     height: auto;
     width: 150px;
 }
@@ -126,8 +113,9 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: left;
-    padding-left: 0px;
+    padding-left: 1px;
     width: 70%;
+    padding-right: 20px;
 }
 
 .watch-label {
@@ -142,4 +130,49 @@ h1 {
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+.title a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Added styles for components below the video section */
+
+app-card,
+app-testimonials,
+app-footer {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+}
+
+
+/* Ensure the content below video is visible */
+
+.spaceline-container+app-card,
+.spaceline-container+app-testimonials,
+.spaceline-container+app-footer {
+    position: relative;
+    z-index: 4;
+    background-color: #fff;
+    /* or whatever background color you want */
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    .hero-content .subtitle {
+        font-size: 16px;
+    }
+}
+
+
+/* Optional: Add these styles if you want to handle video loading */
+
+.video-background.loading {
+    background: #1a0033;
+    /* Fallback color while video loads */
 }

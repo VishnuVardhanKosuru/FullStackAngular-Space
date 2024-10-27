@@ -1,0 +1,82 @@
+<!-- investments.component.html -->
+<div class="investments-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Investment Portfolio</h1>
+            <p class="subtitle">Building the Future of Real Estate Technology</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Stats -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item" *ngFor="let stat of portfolioStats">
+                <h3 class="stat-value">{{stat.value}}</h3>
+                <p class="stat-label">{{stat.label}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Focus -->
+    <section class="focus-section">
+        <div class="content-wrapper">
+            <h2>Investment Focus</h2>
+            <div class="focus-grid">
+                <div class="focus-item" *ngFor="let focus of investmentFocus">
+                    <i [class]="focus.icon"></i>
+                    <h3>{{focus.title}}</h3>
+                    <p>{{focus.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Companies -->
+    <section class="portfolio-section">
+        <div class="content-wrapper">
+            <h2>Portfolio Companies</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" *ngFor="let company of portfolioCompanies">
+                    <div class="company-logo">
+                        <img [src]="company.logo" [alt]="company.name" (error)="handleImageError($event)">
+                    </div>
+                    <div class="company-info">
+                        <h3>{{company.name}}</h3>
+                        <p class="description">{{company.description}}</p>
+                        <div class="company-meta">
+                            <span class="year">Since {{company.investmentYear}}</span>
+                            <span class="status">{{company.status}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Process -->
+    <section class="process-section">
+        <div class="content-wrapper">
+            <h2>Investment Process</h2>
+            <div class="process-timeline">
+                <div class="process-item" *ngFor="let process of investmentProcess; let i = index">
+                    <div class="process-number">{{i + 1}}</div>
+                    <div class="process-content">
+                        <h3>{{process.stage}}</h3>
+                        <p>{{process.description}}</p>
+                        <span class="duration">{{process.duration}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section">
+        <div class="content-wrapper">
+            <h2>Ready to Scale Your PropTech Innovation?</h2>
+            <p>We're always looking for ambitious teams pushing the boundaries of real estate technology.</p>
+            <button class="cta-button">Submit Your Pitch</button>
+        </div>
+    </section>
+</div>

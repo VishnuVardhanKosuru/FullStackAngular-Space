@@ -1,0 +1,78 @@
+<div class="about-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="logo-container">
+                <a href="#">
+                    <img src="assets/logo.png" alt="Company Logo" class="company-logo">
+                </a>
+            </div>
+            <h1>About Us</h1>
+            <p class="subtitle">Empowering Innovation in Real Estate Technology</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="content-wrapper">
+            <h2>Our Mission</h2>
+            <p>We are dedicated to transforming the real estate industry through technology and innovation. Our mission is to identify, nurture, and scale the most promising proptech startups globally.</p>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item" *ngFor="let stat of stats">
+                <h3 class="stat-value">{{stat.value}}</h3>
+                <p class="stat-label">{{stat.label}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="content-wrapper">
+            <h2>Our Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member" *ngFor="let member of teamMembers">
+                    <div class="member-image">
+                        <img [src]="member.image" [alt]="member.name">
+                    </div>
+                    <div class="member-info">
+                        <h3>{{member.name}}</h3>
+                        <p class="position">{{member.position}}</p>
+                        <p class="description">{{member.description}}</p>
+                        <a [href]="member.linkedin" target="_blank" class="linkedin-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="content-wrapper">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation First</h3>
+                    <p>We believe in pushing boundaries and embracing new technologies.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Collaboration</h3>
+                    <p>Success comes through strong partnerships and teamwork.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Impact</h3>
+                    <p>We think globally while acting locally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

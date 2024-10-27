@@ -1,148 +1,242 @@
-.signup-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1A0733;
-    color: white;
-    padding: 20px;
-}
+        /* signup.component.css */
+        
+        .signup-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://www.hdwallpapers.in/download/astronauts_space_exploration-HD.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 20px;
+            position: relative;
+            object-fit: cover;
+        }
+        
+        .company {
+            font-size: 28px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #B026FF, #884DFF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .content {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            background: rgba(26, 7, 51, 0.9);
+            padding: 40px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 40px rgba(176, 38, 255, 0.2);
+            border: 1px solid rgba(176, 38, 255, 0.1);
+            background: transparent;
+            /*background-image: url('https://www.zdnet.com/a/img/resize/e03295597c8b710bf6b96f68576127ac0b579f6b/2023/01/19/bd282ca9-21a9-42b4-889c-e59f36042728/screen-shot-2023-01-19-at-2-15-42-pm.png?auto=webp&fit=crop&height=675&width=1200');
 
-.signup-container {
-    background-image: url('../../assets/signup_image.jpg');
-    background-size: cover;
-    background-position: center
-}
-
-
-/* https: //static.vecteezy.com/system/resources/thumbnails/023/368/492/original/traveling-through-star-in-dark-space-animation-space-travel-background-motion-graphic-free-video.jpg */
-
-.company {
-    font-size: 24px;
-    position: absolute;
-    top: 10%;
-    right: 90%;
-}
-
-.content {
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-}
-
-.page-indicator {
-    color: #8E8E8E;
-    margin-bottom: 40px;
-    font-size: 14px;
-}
-
-.title {
-    font-size: 48px;
-    font-weight: 300;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.description {
-    color: #B4B4B4;
-    margin-bottom: 40px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.signup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 25px;
-    color: white;
-    font-size: 16px;
-}
-
-.form-group input::placeholder {
-    color: #8E8E8E;
-}
-
-.form-group input.invalid {
-    border: 1px solid #ff4444;
-}
-
-.terms-group {
-    text-align: left;
-    margin: 20px 0;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.terms-text {
-    font-size: 14px;
-    color: #B4B4B4;
-}
-
-.privacy-link,
-.terms-link {
-    color: white;
-    text-decoration: none;
-}
-
-.privacy-link:hover,
-.terms-link:hover {
-    text-decoration: underline;
-}
-
-.next-button {
-    background: #B026FF;
-    color: white;
-    border: none;
-    padding: 15px 60px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-}
-
-.next-button:disabled {
-    background: #666;
-    cursor: not-allowed;
-}
-
-.next-button:hover:not(:disabled) {
-    background: #C24FFF;
-}
-
-
-/* Custom checkbox styling */
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    accent-color: #B026FF;
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 36px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .form-group input {
-        padding: 12px;
-    }
-}
+*/
+        }
+        
+        .title {
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(45deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            /* background: linear-gradient(45deg, #bf7d1b, #161414); */
+            background-color: rgb(182, 27, 27);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .description {
+            color: #B4B4B4;
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .form-columns {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .form-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group input,
+        .select-input,
+        .textarea-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(176, 38, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .select-input:focus,
+        .textarea-input:focus {
+            outline: none;
+            border-color: #B026FF;
+            background: rgba(176, 38, 255, 0.1);
+            box-shadow: 0 0 15px rgba(176, 38, 255, 0.2);
+        }
+        
+        .form-group input::placeholder,
+        .select-input::placeholder,
+        .textarea-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .textarea-input {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .select-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23B026FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+        
+        .select-input option {
+            background: #1A0733;
+            color: white;
+        }
+        
+        .invalid {
+            border-color: #ff4444 !important;
+        }
+        
+        .form-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .terms-group {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        
+        .terms-text {
+            font-size: 14px;
+            color: #B4B4B4;
+        }
+        
+        .privacy-link,
+        .terms-link {
+            color: #B026FF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .privacy-link:hover,
+        .terms-link:hover {
+            color: #C24FFF;
+            text-decoration: underline;
+        }
+        
+        .next-button {
+            background: linear-gradient(45deg, #B026FF, #884DFF);
+            color: white;
+            border: none;
+            padding: 18px 80px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .next-button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        
+        .next-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 25px rgba(176, 38, 255, 0.4);
+            background: linear-gradient(45deg, #C24FFF, #9B6AFF);
+        }
+        
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            accent-color: #B026FF;
+        }
+        
+        @media (max-width: 768px) {
+            .form-columns {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .title {
+                font-size: 28px;
+            }
+            .subtitle {
+                font-size: 20px;
+            }
+            .description {
+                font-size: 16px;
+            }
+            .company {
+                top: 20px;
+                left: 20px;
+                font-size: 20px;
+            }
+            .next-button {
+                padding: 15px 40px;
+                font-size: 16px;
+            }
+        }
