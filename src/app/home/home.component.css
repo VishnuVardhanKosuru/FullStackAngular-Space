@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font globally */
 }
 
 .spaceline-container {
@@ -18,7 +19,6 @@
     width: 100%;
     height: 100%;
 }
-
 
 /* Video Background */
 
@@ -47,7 +47,6 @@
     z-index: 2;
 }
 
-
 /* Content Wrapper */
 
 .content-wrapper {
@@ -59,7 +58,6 @@
     flex-direction: column;
 }
 
-
 /* Logo */
 
 .logo {
@@ -69,12 +67,10 @@
 }
 
 .logo h3 {
-    font-family: 'Helvetica Neue', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 2px;
 }
-
 
 /* Main Text */
 
@@ -92,14 +88,17 @@
     color: #999;
 }
 
-.main-text h1 {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 4.5rem;
-    font-weight: 300;
+.main-text h1,
+.main-text h2,
+.main-text h3,  /* Add any other heading tags if needed */
+.main-text h4,
+.main-text h5,
+.main-text h6 {
+    font-size: 4.5rem; /* You can adjust sizes for other headings if needed */
+    font-weight: 300; /* You can adjust weight as per your design */
     line-height: 1.2;
     letter-spacing: 2px;
 }
-
 
 /* Video Card */
 
@@ -153,7 +152,6 @@
     font-weight: 400;
     line-height: 1.3;
 }
-
 
 /* Media Queries */
 

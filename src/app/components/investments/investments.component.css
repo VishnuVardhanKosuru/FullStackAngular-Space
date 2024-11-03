@@ -19,6 +19,259 @@
     font-size: 48px;
     margin-bottom: 20px;
 }
+/* investments.component.css */
+
+/* Apply Orbitron font to the whole component */
+.investments-container {
+    font-family: 'Orbitron', sans-serif; /* Change font family to Orbitron */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(26, 0, 51, 0.8), rgba(26, 0, 51, 0.8)), url('/assets/investment-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Stats Section */
+.stats-section {
+    background-color: #1a0033;
+    color: white;
+    padding: 60px 0;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+}
+
+/* Investment Focus */
+.focus-section {
+    background-color: white;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.focus-item {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.focus-item:hover {
+    transform: translateY(-5px);
+}
+
+.focus-item i {
+    font-size: 48px;
+    color: #1a0033;
+    margin-bottom: 20px;
+}
+
+.focus-item h3 {
+    margin-bottom: 15px;
+    color: #1a0033;
+}
+
+/* Portfolio Companies */
+.portfolio-section {
+    background-color: #f5f5f5;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.company-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.company-info h3 {
+    margin-bottom: 10px;
+    color: #1a0033;
+}
+
+.company-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Investment Process */
+.process-section {
+    background-color: white;
+}
+
+.process-timeline {
+    margin-top: 40px;
+    position: relative;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #1a0033;
+}
+
+.process-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.process-number {
+    width: 30px;
+    height: 30px;
+    background: #1a0033;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.process-content {
+    flex: 1;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.duration {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #1a0033;
+    color: white;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #ffc107;
+    color: #1a0033;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #ffcd38;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .stats-container,
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    .hero-content .subtitle {
+        font-size: 18px;
+    }
+    .content-wrapper {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container,
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-content {
+        padding: 15px;
+    }
+}
+
 
 .hero-content .subtitle {
     font-size: 24px;
