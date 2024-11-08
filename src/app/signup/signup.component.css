@@ -1,46 +1,56 @@
         /* signup.component.css */
         
-        .signup-container {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('https://www.hdwallpapers.in/download/astronauts_space_exploration-HD.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 20px;
-            position: relative;
-            object-fit: cover;
-        }
+
+        /* signup.component.css */
+
+.signup-container {
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://www.hdwallpapers.in/download/astronauts_space_exploration-HD.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 20px;
+    position: relative;
+    object-fit: cover;
+}
+
+/* Other styles remain unchanged... */
+
+
+
+/* Continue with the rest of your styles... */
+
+    .company {
+        font-size: 28px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #B026FF, #884DFF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
         
-        .company {
-            font-size: 28px;
-            position: absolute;
-            top: 40px;
-            left: 40px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background: linear-gradient(45deg, #B026FF, #884DFF);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .content {
-            max-width: 1000px;
-            width: 100%;
-            text-align: center;
-            background: rgba(26, 7, 51, 0.9);
-            padding: 40px;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 40px rgba(176, 38, 255, 0.2);
-            border: 1px solid rgba(176, 38, 255, 0.1);
-            background: transparent;
-            /*background-image: url('https://www.zdnet.com/a/img/resize/e03295597c8b710bf6b96f68576127ac0b579f6b/2023/01/19/bd282ca9-21a9-42b4-889c-e59f36042728/screen-shot-2023-01-19-at-2-15-42-pm.png?auto=webp&fit=crop&height=675&width=1200');
+    .content {
+        max-width: 1000px;
+        width: 100%;
+        text-align: center;
+        background: rgba(26, 7, 51, 0.9);
+        padding: 40px;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 40px rgba(176, 38, 255, 0.2);
+        border: 1px solid rgba(176, 38, 255, 0.1);
+        background: transparent;
+        /*background-image: url('https://www.zdnet.com/a/img/resize/e03295597c8b710bf6b96f68576127ac0b579f6b/2023/01/19/bd282ca9-21a9-42b4-889c-e59f36042728/screen-shot-2023-01-19-at-2-15-42-pm.png?auto=webp&fit=crop&height=675&width=1200');
 
 */
         }
