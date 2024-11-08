@@ -1,0 +1,101 @@
+<!-- innovation-consulting.component.html -->
+<div class="consulting-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Innovation Consulting</h1>
+            <p class="subtitle">Transforming Real Estate Through Technology</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="content-wrapper">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" *ngFor="let service of services">
+                    <div class="service-icon">
+                        <i [class]="service.icon"></i>
+                    </div>
+                    <h3>{{service.title}}</h3>
+                    <p>{{service.description}}</p>
+                    <ul class="service-features">
+                        <li *ngFor="let feature of service.features">{{feature}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology-section">
+        <div class="content-wrapper">
+            <h2>Our Methodology</h2>
+            <div class="methodology-timeline">
+                <div class="methodology-item" *ngFor="let phase of methodology; let i = index">
+                    <div class="phase-number">{{i + 1}}</div>
+                    <div class="phase-content">
+                        <h3>{{phase.phase}}</h3>
+                        <p class="phase-description">{{phase.description}}</p>
+                        <ul class="phase-activities">
+                            <li *ngFor="let activity of phase.activities">{{activity}}</li>
+                        </ul>
+                        <span class="duration">{{phase.duration}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics -->
+    <section class="metrics-section">
+        <div class="metrics-container">
+            <div class="metric-item" *ngFor="let metric of successMetrics">
+                <h3 class="metric-value">{{metric.value}}</h3>
+                <p class="metric-label">{{metric.label}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies-section">
+        <div class="content-wrapper">
+            <h2>Success Stories</h2>
+            <div class="case-studies-grid">
+                <div class="case-study-card" *ngFor="let case of caseStudies">
+                    <div class="case-study-image">
+                        <img [src]="case.image" [alt]="case.title" (error)="handleImageError($event)">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>{{case.title}}</h3>
+                        <div class="case-study-details">
+                            <div class="detail-section">
+                                <h4>Challenge:</h4>
+                                <p>{{case.challenge}}</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Solution:</h4>
+                                <p>{{case.solution}}</p>
+                            </div>
+                            <div class="detail-section">
+                                <h4>Results:</h4>
+                                <ul>
+                                    <li *ngFor="let result of case.results">{{result}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section">
+        <div class="content-wrapper">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's discuss how we can help you innovate and grow.</p>
+            <button class="cta-button">Schedule a Consultation</button>
+        </div>
+    </section>
+</div>

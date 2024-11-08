@@ -133,7 +133,8 @@
 
 .company-logo img {
     max-width: 150px;
-    height: auto;
+    height: 110px;
+    width: 100px;
 }
 
 .company-info h3 {

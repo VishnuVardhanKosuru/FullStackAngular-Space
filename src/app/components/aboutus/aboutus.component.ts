@@ -13,29 +13,29 @@ export class AboutusComponent implements OnInit {
     {
       name: 'Sri Harshitha',
       position: 'CEO & Co-Founder',
-      image: 'assets/team/john-doe.jpg',
-      description: 'Over 15 years of experience in technology and innovation.',
+      image: 'assets/harshitha.jpg',  
+      description: 'Over 15 years of experience in technology and innovation',
       linkedin: 'https://linkedin.com/in/johndoe'
     },
     {
       name: 'Sree Virajitha',
       position: 'Chief Innovation Officer',
-      image: 'assets/team/jane-smith.jpg',
-      description: 'Expert in digital transformation and strategic planning.',
+      image: 'assets/vir.jpg',
+      description: 'Expert in digital transformation and strategic planning',
       linkedin: 'https://linkedin.com/in/janesmith'
     },
     {
       name: 'Vishnu Vardhan',
       position: 'Managing Director & Co-Founder',
-      image: 'assets/team/jane-smith.jpg',
-      description: 'Expert in digital transformation and strategic planning.',
+      image: 'assets/vishnu.jpg',
+      description: 'Fueling our journey to the stars',
       linkedin: 'https://linkedin.com/in/janesmith'
     },
     {
       name: 'Supreeth Gupta',
       position: 'Co-CEO & CTO',
-      image: 'assets/team/jane-smith.jpg',
-      description: 'Expert in digital transformation and strategic planning.',
+      image: 'assets/sup.jpg',
+      description: 'Crafting the technology that will shape the cosmos',
       linkedin: 'https://linkedin.com/in/janesmith'
     },
     // Add more team members as needed

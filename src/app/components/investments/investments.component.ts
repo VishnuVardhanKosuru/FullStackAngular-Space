@@ -42,23 +42,23 @@ export class InvestmentsComponent implements OnInit {
 
   portfolioCompanies = [
     {
-      name: 'TechEstate',
-      logo: 'assets/companies/tech-estate.png',
-      description: 'AI-powered property management platform',
+      name: 'Dhruva',
+      logo: 'assets/company1.jpg',
+      description: 'An Indian spacetech startup focused on satellite design and  manufacturing',
       investmentYear: 2022,
       status: 'Growing'
     },
     {
-      name: 'SmartLease',
-      logo: 'assets/companies/smart-lease.png',
-      description: 'Blockchain-based leasing solution',
+      name: 'DressUpRocket',
+      logo: 'assets/company2.jpg',
+      description: 'Space themed mystery AR game company based in san fransisco',
       investmentYear: 2021,
       status: 'Series B'
     },
     {
-      name: 'GreenBuild',
-      logo: 'assets/companies/green-build.png',
-      description: 'Sustainable construction technology',
+      name: 'Orion Aerospace',
+      logo: 'assets/company3.jpg',
+      description: 'Space propellors research company at the west coast',
       investmentYear: 2023,
       status: 'Early Stage'
     }

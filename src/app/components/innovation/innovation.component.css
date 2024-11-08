@@ -1,0 +1,259 @@
+/* innovation-consulting.component.css */
+
+
+/* Hero Section */
+
+.hero-section {
+    background: linear-gradient(rgba(26, 0, 51, 0.8), rgba(26, 0, 51, 0.8)), url('/assets/consulting-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+/* Content Wrapper */
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+
+/* Services Section */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #1a0033;
+    margin-bottom: 20px;
+}
+
+.service-features {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+
+/* Methodology Section */
+
+.methodology-timeline {
+    position: relative;
+    margin-top: 40px;
+}
+
+.methodology-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #1a0033;
+}
+
+.methodology-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.phase-number {
+    width: 30px;
+    height: 30px;
+    background: #1a0033;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.phase-content {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.phase-activities {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.duration {
+    display: inline-block;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Metrics Section */
+
+.metrics-section {
+    background-color: #1a0033;
+    padding: 60px 0;
+}
+
+.metrics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.metric-item {
+    text-align: center;
+    color: white;
+}
+
+.metric-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+
+/* Case Studies Section */
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.case-study-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.case-study-content {
+    padding: 25px;
+}
+
+.detail-section {
+    margin-top: 15px;
+}
+
+.detail-section h4 {
+    color: #1a0033;
+    margin-bottom: 5px;
+}
+
+.detail-section ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+
+/* CTA Section */
+
+.cta-section {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #1a0033;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2a0052;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .metrics-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    .hero-content .subtitle {
+        font-size: 18px;
+    }
+    .content-wrapper {
+        padding: 40px 20px;
+    }
+    .methodology-item {
+        flex-direction: column;
+    }
+    .phase-number {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .metrics-container {
+        grid-template-columns: 1fr;
+    }
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+}
