@@ -27,7 +27,7 @@ Welcome to **SpaceCo**, a next-gen platform that brings the wonders of space exp
 
 ## 🎥 **Video Demo**  
 Check out our amazing demo video showcasing SpaceCo in action! 🌟  
-👉 **[Watch the Demo Here](#)**  
+👉 **Below attached**  
 
 ---
 
@@ -38,8 +38,3 @@ Clone the repository and experience the wonders of SpaceCo!
 - Node.js and Angular CLI 🖥️  
 - Java 11+ and Spring Boot ☕  
 
-### Installation  
-1. Clone this repository:  
-   ```bash  
-   git clone https://github.com/your-username/spaceco.git  
-   cd spaceco  
